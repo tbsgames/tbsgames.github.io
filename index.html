@@ -9,8 +9,6 @@
 
 <h1>the blandford school games</h1>
 
-<p>games for FREE like minecraft</p>
-
 <hr>
 
 <button onclick="window.open('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html', '_blank')">
@@ -28,6 +26,25 @@ slope NO BUGS btw
 <button onclick="window.open('https://chromedino.com/', '_blank')">
 chrome dinosaur game
 </button>
+
+<hr>
+
+<h2>loader</h2>
+
+<input id="urlInput" type="text" placeholder="enter link here" style="width:300px;">
+<button onclick="loadLink()">load</button>
+
+<script>
+function loadLink() {
+  let url = document.getElementById("urlInput").value;
+
+  if (!url.startsWith("http")) {
+    url = "https://" + url;
+  }
+
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+</script>
 
 </body>
 
