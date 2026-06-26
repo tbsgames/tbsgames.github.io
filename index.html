@@ -9,7 +9,7 @@
 
 <h1>games</h1>
 
-<p>warning: these can get patched, if they don't work try to use the loader at the bottom of the page</p>
+<p>warning: these can get patched, if they don't work try the loader at the bottom</p>
 
 <hr>
 
@@ -19,10 +19,18 @@
 minecraft
 </button>
 
+<button onclick="downloadShortcut('minecraft','https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html')">
+download
+</button>
+
 <br><br>
 
 <button onclick="window.open('https://slopenexus.github.io/games/19-04v2.1/index.html', '_blank')">
 slope no bugs
+</button>
+
+<button onclick="downloadShortcut('slope','https://slopenexus.github.io/games/19-04v2.1/index.html')">
+download
 </button>
 
 <br><br>
@@ -31,10 +39,18 @@ slope no bugs
 starship
 </button>
 
+<button onclick="downloadShortcut('starship','https://scratch.mit.edu/projects/818748698/fullscreen/')">
+download
+</button>
+
 <br><br>
 
 <button onclick="window.open('https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0', '_blank')">
 geometry dash ripoff
+</button>
+
+<button onclick="downloadShortcut('geometry dash','https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0')">
+download
 </button>
 
 <br><br>
@@ -43,10 +59,18 @@ geometry dash ripoff
 granny ripoff
 </button>
 
+<button onclick="downloadShortcut('granny','https://sites.google.com/view/drive-u-7-home/renny?authuser=0')">
+download
+</button>
+
 <br><br>
 
 <button onclick="window.open('https://sites.google.com/view/drive-u-7-home/gta?authuser=0', '_blank')">
 gta??
+</button>
+
+<button onclick="downloadShortcut('gta','https://sites.google.com/view/drive-u-7-home/gta?authuser=0')">
+download
 </button>
 
 <br><br>
@@ -55,31 +79,9 @@ gta??
 unblocked games library
 </button>
 
-<hr>
-
-<h2>downloads</h2>
-
-<p>opens the same games in new tabs (simple fallback)</p>
-
-<a href="https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html" target="_blank">minecraft</a>
-<br>
-
-<a href="https://slopenexus.github.io/games/19-04v2.1/index.html" target="_blank">slope no bugs</a>
-<br>
-
-<a href="https://scratch.mit.edu/projects/818748698/fullscreen/" target="_blank">starship</a>
-<br>
-
-<a href="https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0" target="_blank">geometry dash ripoff</a>
-<br>
-
-<a href="https://sites.google.com/view/drive-u-7-home/renny?authuser=0" target="_blank">granny ripoff</a>
-<br>
-
-<a href="https://sites.google.com/view/drive-u-7-home/gta?authuser=0" target="_blank">gta??</a>
-<br>
-
-<a href="https://sites.google.com/view/drive-u-7-home/home" target="_blank">unblocked games library</a>
+<button onclick="downloadShortcut('games library','https://sites.google.com/view/drive-u-7-home/home')">
+download
+</button>
 
 <hr>
 
@@ -97,6 +99,28 @@ function loadLink() {
   }
 
   window.open(url, "_blank", "noopener,noreferrer");
+}
+
+// creates downloadable HTML shortcut file
+function downloadShortcut(name, url) {
+  const fileContent = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0; url=${url}">
+<title>${name}</title>
+</head>
+<body>
+If not redirected, <a href="${url}">click here</a>.
+</body>
+</html>
+`;
+
+  const blob = new Blob([fileContent], { type: "text/html" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name + ".html";
+  a.click();
 }
 </script>
 
