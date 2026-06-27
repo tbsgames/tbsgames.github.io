@@ -123,39 +123,38 @@ input {
 <!-- HEADER -->
 <div class="header">
   <h1>Atlas Loader</h1>
-  <p>Game and website loader</p>
+  <p>game and website loader</p>
 </div>
 
 <!-- GAMES -->
 <div class="section">
 <h2>Games</h2>
 
-<button onclick="window.open('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html','_blank')">Minecraft</button>
-<button onclick="downloadShortcut('minecraft','https://d1tm91r4ytbt54.cloudfront.net/...')">Download</button>
+<button onclick="window.open('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html','_blank')">minecraft</button>
+<button onclick="downloadShortcut('minecraft','https://d1tm91r4ytbt54.cloudfront.net/...')">download page</button>
 <br>
 
-<button onclick="window.open('https://slopenexus.github.io/games/19-04v2.1/index.html','_blank')">Fixed Slope</button>
-<button onclick="downloadShortcut('slope','https://slopenexus.github.io/games/19-04v2.1/index.html')">Download</button>
+<button onclick="window.open('https://slopenexus.github.io/games/19-04v2.1/index.html','_blank')">fixed slope</button>
+<button onclick="downloadShortcut('slope','https://slopenexus.github.io/games/19-04v2.1/index.html')">download page</button>
 <br>
 
-<button onclick="window.open('https://scratch.mit.edu/projects/818748698/fullscreen/','_blank')">Starship</button>
-<button onclick="downloadShortcut('starship','https://scratch.mit.edu/projects/818748698/fullscreen/')">Download</button>
+<button onclick="window.open('https://scratch.mit.edu/projects/818748698/fullscreen/','_blank')">starship</button>
+<button onclick="downloadShortcut('starship','https://scratch.mit.edu/projects/818748698/fullscreen/')">download page</button>
 <br>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0','_blank')">Geometry Dash</button>
-<button onclick="downloadShortcut('geometry dash','https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0')">Download</button>
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0','_blank')">geometry dash wave</button>
+<button onclick="downloadShortcut('geometry dash','https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0')">download page</button>
 <br>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/renny?authuser=0','_blank')">Granny</button>
-<button onclick="downloadShortcut('granny','https://sites.google.com/view/drive-u-7-home/renny?authuser=0')">Download</button>
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/renny?authuser=0','_blank')">granny</button>
+<button onclick="downloadShortcut('granny','https://sites.google.com/view/drive-u-7-home/renny?authuser=0')">download page</button>
 <br>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/gta?authuser=0','_blank')">GTA 7</button>
-<button onclick="downloadShortcut('gta','https://sites.google.com/view/drive-u-7-home/gta?authuser=0')">Download</button>
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/gta?authuser=0','_blank')">gta 7</button>
+<button onclick="downloadShortcut('gta','https://sites.google.com/view/drive-u-7-home/gta?authuser=0')">download page</button>
 <br>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/home','_blank')">Game Library</button>
-<button onclick="downloadShortcut('games library','https://sites.google.com/view/drive-u-7-home/home')">Download</button>
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/home','_blank')">full game library</button>
 
 </div>
 
@@ -173,6 +172,7 @@ input {
 <h2>Settings</h2>
 
 <button onclick="toggleTheme()">light mode</button>
+<button onclick="setNewTabTitle()">hide tab title</button>
 
 </div>
 
@@ -216,6 +216,11 @@ If not redirected, <a href="${url}">click here</a>.
 // theme toggle
 function toggleTheme() {
   document.body.classList.toggle("light");
+}
+
+// NEW: change tab title
+function setNewTabTitle() {
+  document.title = "New Tab";
 }
 
 </script>
