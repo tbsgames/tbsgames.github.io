@@ -4,12 +4,12 @@
 <head>
 <title>Atlas Loader</title>
 
-<!-- JetBrains Mono -->
+<link rel="icon" type="image/png" href="atlas.png">
+
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* FORCE FONT FOR EVERYTHING */
 * {
   font-family: 'JetBrains Mono', monospace !important;
 }
@@ -23,12 +23,12 @@ body {
   padding: 40px;
 }
 
-/* main container */
+
 .container {
   width: 700px;
 }
 
-/* header */
+
 .header {
   background: #0f0f0f;
   padding: 25px;
@@ -37,17 +37,19 @@ body {
   margin-bottom: 20px;
 }
 
+
 .header h1 {
   margin: 0;
   font-size: 32px;
 }
+
 
 .header p {
   margin: 6px 0 0 0;
   opacity: 0.7;
 }
 
-/* sections */
+
 .section {
   background: #0f0f0f;
   padding: 20px;
@@ -56,11 +58,36 @@ body {
   margin-bottom: 20px;
 }
 
+
 .section h2 {
   margin-top: 0;
 }
 
-/* buttons */
+
+/* GAME CARDS */
+
+.game-card {
+  background: #0a0a0a;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+
+.game-card h3 {
+  margin: 0 0 8px 0;
+}
+
+
+.game-card p {
+  opacity: 0.7;
+  margin-top: 0;
+}
+
+
+
+/* BUTTONS */
+
 button {
   background: #0a0a0a;
   color: white;
@@ -72,11 +99,15 @@ button {
   transition: 0.2s;
 }
 
+
 button:hover {
-  background: #0f0f0f;
+  background: #151515;
 }
 
-/* input */
+
+
+/* INPUT */
+
 input {
   padding: 10px;
   border-radius: 10px;
@@ -87,11 +118,15 @@ input {
   color: white;
 }
 
-/* light mode */
+
+
+/* LIGHT MODE */
+
 .light {
   background: #f2f2f2;
   color: black;
 }
+
 
 .light .header,
 .light .section {
@@ -99,131 +134,300 @@ input {
   color: black;
 }
 
+
+.light .game-card {
+  background: #eeeeee;
+}
+
+
 .light button {
   background: #e0e0e0;
   color: black;
 }
 
+
 .light button:hover {
   background: #d0d0d0;
 }
+
 
 .light input {
   background: #f0f0f0;
   color: black;
 }
 
+
 </style>
 </head>
 
+
 <body>
+
 
 <div class="container">
 
-<!-- HEADER -->
+
 <div class="header">
-  <h1>Atlas Loader</h1>
-  <p>game and website loader</p>
+
+<h1>Atlas Loader</h1>
+
+<p><b>v1.1.2</b> · game and website loader</p>
+
 </div>
 
-<!-- GAMES -->
+
+
 <div class="section">
+
 <h2>Games</h2>
 
-<button onclick="window.open('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html','_blank')">minecraft</button>
-<button onclick="downloadShortcut('minecraft','https://d1tm91r4ytbt54.cloudfront.net/...')">download page</button>
-<br>
 
-<button onclick="window.open('https://slopenexus.github.io/games/19-04v2.1/index.html','_blank')">fixed slope</button>
-<button onclick="downloadShortcut('slope','https://slopenexus.github.io/games/19-04v2.1/index.html')">download page</button>
-<br>
 
-<button onclick="window.open('https://scratch.mit.edu/projects/818748698/fullscreen/','_blank')">starship</button>
-<button onclick="downloadShortcut('starship','https://scratch.mit.edu/projects/818748698/fullscreen/')">download page</button>
-<br>
+<div class="game-card">
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0','_blank')">geometry dash wave</button>
-<button onclick="downloadShortcut('geometry dash','https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0')">download page</button>
-<br>
+<h3>minecraft</h3>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/renny?authuser=0','_blank')">granny</button>
-<button onclick="downloadShortcut('granny','https://sites.google.com/view/drive-u-7-home/renny?authuser=0')">download page</button>
-<br>
+<p>the classic survival or creative game</p>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/gta?authuser=0','_blank')">gta 7</button>
-<button onclick="downloadShortcut('gta','https://sites.google.com/view/drive-u-7-home/gta?authuser=0')">download page</button>
-<br>
+<button onclick="window.open('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html','_blank')">
+play
+</button>
 
-<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/home','_blank')">full game library</button>
+<button onclick="downloadShortcut('minecraft','https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html')">
+download page
+</button>
 
 </div>
 
-<!-- LOADER -->
+
+
+<div class="game-card">
+
+<h3>fixed slope</h3>
+
+<p>endless slope game, now fixed without bugs</p>
+
+<button onclick="window.open('https://slopenexus.github.io/games/19-04v2.1/index.html','_blank')">
+play
+</button>
+
+<button onclick="downloadShortcut('slope','https://slopenexus.github.io/games/19-04v2.1/index.html')">
+download page
+</button>
+
+</div>
+
+
+
+<div class="game-card">
+
+<h3>starship</h3>
+
+<p>endless game where you must evade asteroids with 3 lives</p>
+
+<button onclick="window.open('https://scratch.mit.edu/projects/818748698/fullscreen/','_blank')">
+play
+</button>
+
+<button onclick="downloadShortcut('starship','https://scratch.mit.edu/projects/818748698/fullscreen/')">
+download page
+</button>
+
+</div>
+
+
+
+<div class="game-card">
+
+<h3>geometry dash wave</h3>
+
+<p>rhythm platformer style game, NOT the original version</p>
+
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0','_blank')">
+play
+</button>
+
+<button onclick="downloadShortcut('geometry dash','https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0')">
+download page
+</button>
+
+</div>
+
+
+
+<div class="game-card">
+
+<h3>granny</h3>
+
+<p>classic horror game</p>
+
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/renny?authuser=0','_blank')">
+play
+</button>
+
+<button onclick="downloadShortcut('granny','https://sites.google.com/view/drive-u-7-home/renny?authuser=0')">
+download page
+</button>
+
+</div>
+
+
+
+<div class="game-card">
+
+<h3>gta 7</h3>
+
+<p>funny russian gta ripoff</p>
+
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/gta?authuser=0','_blank')">
+play
+</button>
+
+<button onclick="downloadShortcut('gta','https://sites.google.com/view/drive-u-7-home/gta?authuser=0')">
+download page
+</button>
+
+</div>
+
+
+
+<div class="game-card">
+
+<h3>full game library</h3>
+
+<p>a collection of more browser games</p>
+
+<button onclick="window.open('https://sites.google.com/view/drive-u-7-home/home','_blank')">
+play
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
 <div class="section">
+
 <h2>Website Loader</h2>
 
 <input id="urlInput" type="text" placeholder="enter link here">
+
 <button onclick="loadLink()">load</button>
 
 </div>
 
-<!-- SETTINGS -->
+
+
+
 <div class="section">
+
 <h2>Settings</h2>
 
 <button onclick="toggleTheme()">light mode</button>
+
 <button onclick="setNewTabTitle()">hide tab title</button>
 
 </div>
 
+
+
 </div>
+
+
+
 
 <script>
 
-// loader
+
 function loadLink() {
-  let url = document.getElementById("urlInput").value;
 
-  if (!url.startsWith("http")) {
-    url = "https://" + url;
-  }
+let url = document.getElementById("urlInput").value;
 
-  window.open(url, "_blank", "noopener,noreferrer");
+
+if (!url.startsWith("http")) {
+
+url = "https://" + url;
+
 }
 
-// shortcut downloader
-function downloadShortcut(name, url) {
-  const fileContent = `
+
+window.open(url,"_blank","noopener,noreferrer");
+
+}
+
+
+
+
+function downloadShortcut(name,url) {
+
+
+const fileContent = `
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <meta http-equiv="refresh" content="0; url=${url}">
+
 <title>${name}</title>
+
 </head>
+
 <body>
+
 If not redirected, <a href="${url}">click here</a>.
+
 </body>
+
 </html>
+
 `;
 
-  const blob = new Blob([fileContent], {type:"text/html"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = name + ".html";
-  a.click();
+
+const blob = new Blob([fileContent], {type:"text/html"});
+
+
+const a = document.createElement("a");
+
+
+a.href = URL.createObjectURL(blob);
+
+
+a.download = name + ".html";
+
+
+a.click();
+
+
 }
 
-// theme toggle
+
+
+
 function toggleTheme() {
-  document.body.classList.toggle("light");
+
+document.body.classList.toggle("light");
+
 }
 
-// NEW: change tab title
+
+
+
 function setNewTabTitle() {
-  document.title = "New Tab";
+
+document.title = "New Tab";
+
 }
+
 
 </script>
+
 
 </body>
 
